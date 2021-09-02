@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="cartf">
+ <link 
+    name="dummy_link">
+  </link>
+  <joint
+    name="dummy_joint"
+    type="fixed">
+     <parent
+      link="dummy_link" />
+    <child
+      link="chasis" />
+  </joint>
+  <link
+    name="chasis">
+    <inertial>
+      <origin
+        xyz="0.306715325013249 -2.71753020976429E-06 -0.00815667635088907"
+        rpy="0 0 0" />
+      <mass
+        value="33.2144018580194" />
+      <inertia
+        ixx="0.956231733187828"
+        ixy="2.11975354628092E-06"
+        ixz="0.11287715356547"
+        iyy="1.47602928869039"
+        iyz="-4.42219326557769E-06"
+        izz="1.78987781011623" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cartf/meshes/chasis.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cartf/meshes/chasis.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="rr_spindle">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 -0.0206015076592078 1.11022302462516E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.032963329762829" />
+      <inertia
+        ixx="3.15195491740579E-05"
+        ixy="-1.99865146250362E-20"
+        ixz="-2.99046320933935E-22"
+        iyy="5.29773895211035E-06"
+        iyz="3.53680736486934E-22"
+        izz="3.29550665766564E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cartf/meshes/rr_spindle.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cartf/meshes/rr_spindle.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rrs_joint"
+    type="fixed">
+    <origin
+      xyz="0.5461 0.200455304230583 -0.05715"
+      rpy="1.5707963267949 0 -1.5707963267949" />
+    <parent
+      link="chasis" />
+    <child
+      link="rr_spindle" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="rr_wheel">
+    <inertial>
+      <origin
+        xyz="-1.11022302462516E-16 -1.38777878078145E-17 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.125423442065565" />
+      <inertia
+        ixx="0.000120072398611804"
+        ixy="-1.91230954179958E-23"
+        ixz="3.81164826264435E-21"
+        iyy="0.000237185353944132"
+        iyz="-5.33287966975338E-22"
+        izz="0.000120072398611804" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cartf/meshes/rr_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cartf/meshes/rr_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rrw_joint"
+    type="fixed">
+    <origin
+      xyz="0 -0.08509 0"
+      rpy="3.14159265358979 1.54340479703384 1.5707963267949" />
+    <parent
+      link="rr_spindle" />
+    <child
+      link="rr_wheel" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="rl_spindle">
+    <inertial>
+      <origin
+        xyz="0 -0.0396515076592077 1.11022302462516E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.0329633297628291" />
+      <inertia
+        ixx="3.15195491740579E-05"
+        ixy="-6.98098857709146E-20"
+        ixz="3.47008933615623E-22"
+        iyy="5.29773895211036E-06"
+        iyz="-1.29829194023181E-22"
+        izz="3.29550665766565E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cartf/meshes/rl_spindle.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cartf/meshes/rl_spindle.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rls_joint"
+    type="continuous">
+    <origin
+      xyz="0.5461 -0.198324695769416 -0.0381"
+      rpy="1.5707963267949 0 -1.5707963267949" />
+    <parent
+      link="chasis" />
+    <child
+      link="rl_spindle" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="rl_wheel">
+    <inertial>
+      <origin
+        xyz="-0.00148279198290668 5.55111512312578E-17 0.0541196907597912"
+        rpy="0 0 0" />
+      <mass
+        value="0.125423442065565" />
+      <inertia
+        ixx="0.000120072398611804"
+        ixy="-2.9583421033843E-23"
+        ixz="3.81164826264435E-21"
+        iyy="0.000237185353944132"
+        iyz="-3.63860835099325E-22"
+        izz="0.000120072398611804" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cartf/meshes/rl_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cartf/meshes/rl_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rlw_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.05 0"
+      rpy="3.14159265358979 1.54340479703384 1.5707963267949" />
+    <parent
+      link="rl_spindle" />
+    <child
+      link="rl_wheel" />
+    <axis
+      xyz="0.0273881045974643 0 -0.999624875504085" />
+  </joint>
+  <link
+    name="fr_spindle">
+    <inertial>
+      <origin
+        xyz="1.52655665885959E-16 -0.0396515076592076 8.88178419700125E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.0329633297628289" />
+      <inertia
+        ixx="3.15195491740577E-05"
+        ixy="-3.26037767873418E-21"
+        ixz="1.05879118406788E-20"
+        iyy="5.29773895211029E-06"
+        iyz="-6.4567825328811E-21"
+        izz="3.29550665766563E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cartf/meshes/fr_spindle.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cartf/meshes/fr_spindle.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="frs_joint"
+    type="continuous">
+    <origin
+      xyz="0.1143 0.200662394443895 -0.0380999999999998"
+      rpy="1.5707963267949 0 -1.79506698933366" />
+    <parent
+      link="chasis" />
+    <child
+      link="fr_spindle" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="fr_wheel">
+    <inertial>
+      <origin
+        xyz="-0.00148279198290791 1.2490009027033E-16 0.0541196907597912"
+        rpy="0 0 0" />
+      <mass
+        value="0.125423442065565" />
+      <inertia
+        ixx="0.000120072398611804"
+        ixy="6.82708555486966E-19"
+        ixz="6.35274710440725E-21"
+        iyy="0.000237185353944132"
+        iyz="5.72806030580721E-20"
+        izz="0.000120072398611804" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cartf/meshes/fr_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cartf/meshes/fr_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="frw_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.05 0"
+      rpy="3.14159265358979 1.54340479703383 1.5707963267949" />
+    <parent
+      link="fr_spindle" />
+    <child
+      link="fr_wheel" />
+    <axis
+      xyz="0.02738810459747 0 -0.999624875504085" />
+  </joint>
+  <link
+    name="fl_spindle">
+    <inertial>
+      <origin
+        xyz="2.22044604925031E-16 -0.0396515076592077 -5.55111512312578E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.032963329762829" />
+      <inertia
+        ixx="3.15195491740578E-05"
+        ixy="-1.19324752228375E-20"
+        ixz="1.6940658945086E-21"
+        iyy="5.29773895211036E-06"
+        iyz="1.72142061655695E-21"
+        izz="3.29550665766563E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cartf/meshes/fl_spindle.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cartf/meshes/fl_spindle.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fls_joint"
+    type="continuous">
+    <origin
+      xyz="0.1143 -0.198324695769416 -0.0381"
+      rpy="1.5707963267949 0 -2.72589179740421" />
+    <parent
+      link="chasis" />
+    <child
+      link="fl_spindle" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="fl_wheel">
+    <inertial>
+      <origin
+        xyz="-0.00148279198290707 6.66133814775094E-16 0.054119690759791"
+        rpy="0 0 0" />
+      <mass
+        value="0.125423442065566" />
+      <inertia
+        ixx="0.000120072398611805"
+        ixy="2.5410988417629E-19"
+        ixz="1.16467030247466E-21"
+        iyy="0.000237185353944134"
+        iyz="7.72917564369549E-21"
+        izz="0.000120072398611805" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cartf/meshes/fl_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cartf/meshes/fl_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="flw_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.05 0"
+      rpy="3.14159265358979 1.54340479703384 1.5707963267949" />
+    <parent
+      link="fl_spindle" />
+    <child
+      link="fl_wheel" />
+    <axis
+      xyz="0.02738810459747 0 -0.999624875504085" />
+  </joint>
+<transmission name="steer_right">
+     <type>transmission_interface/SimpleTransmission</type>
+     <joint name="frs_joint">
+       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+     </joint>
+     <actuator name="r_steer">
+       <!--hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface-->
+       <mechanicalReduction>2</mechanicalReduction>
+     </actuator>
+   </transmission>
+ <transmission name="steer_left">
+     <type>transmission_interface/SimpleTransmission</type>
+     <joint name="fls_joint">
+       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+     </joint>
+     <actuator name="l_steer">
+       <!--hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface-->
+       <mechanicalReduction>2</mechanicalReduction>
+     </actuator>
+   </transmission>
+ <transmission name="rear_right">
+     <type>transmission_interface/SimpleTransmission</type>
+     <joint name="rrs_joint">
+       <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+     </joint>
+     <actuator name="rr_wheel">
+       <!--hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface-->
+       <mechanicalReduction>2</mechanicalReduction>
+     </actuator>
+   </transmission>
+<transmission name="rear_left">
+     <type>transmission_interface/SimpleTransmission</type>
+     <joint name="rls_joint">
+       <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+     </joint>
+     <actuator name="rl_wheel">
+       <!--hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface-->
+       <mechanicalReduction>2</mechanicalReduction>
+     </actuator>
+   </transmission>
+</robot>
